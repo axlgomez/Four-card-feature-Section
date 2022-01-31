@@ -1,0 +1,113 @@
+.card
+{
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 2em 0;
+    padding: .5em 0 1.5em 2em;
+    box-shadow: 0px 7px 20px #dadada;
+
+    @include responsive(desktop)
+    {
+        padding: .5em 2em 1.5em 2em;
+    }
+
+    &__title
+    {
+        color: $very-dark-blue;
+    }
+
+    &__text
+    {
+        color: $grayish-blue;
+        font-size: 12px;
+        line-height: 1.7;
+        transform: translateY(-1em);
+    }
+
+    &__icon
+    {
+        width: 50px;
+        transform: translateX(12em);
+
+        @include responsive(desktop)
+        {
+            width: 60px;
+            transform: translateX(14em);
+        }
+    }
+
+    &--cyan
+    {
+        border-top: 4px solid $cyan;
+    }
+
+    &--red
+    {
+        border-top: 4px solid $red;
+
+        @include responsive(desktop)
+        {
+            margin-bottom: 1em;
+        }
+    }
+
+    &--orange
+    {
+        border-top: 4px solid $orange;
+
+        @include responsive(desktop)
+        {
+            margin-top: 1em;
+        }
+    }
+
+    &--blue
+    {
+        border-top: 4px solid $blue;
+    }
+}
+
+.container__card
+{
+
+    @include responsive(desktop)
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 65em;
+        margin: 2em auto;
+    }
+
+    &--start
+    {
+
+        @include responsive(desktop)
+        {
+            align-items: center;
+            transform: translateX(-2em);
+        }
+    }
+
+    &--center
+    {
+
+        @include responsive(desktop)
+        {
+            justify-content: center;
+            flex-direction: column;
+            align-content: center;
+        }
+    }
+
+    &--end
+    {
+
+        @include responsive(desktop)
+        {
+            justify-content: flex-end;
+            align-items: center;
+            transform: translateX(2em);
+        }
+    }
+}

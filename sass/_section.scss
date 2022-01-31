@@ -1,0 +1,43 @@
+.section
+{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 4em 2.5em;
+
+
+    &__title
+    {
+        font-size: 24.5px;
+        color: $very-dark-blue;
+        font-weight: map-get($font-weights, extra-light);
+        line-height: 1.5;
+
+        @include responsive(desktop)
+        {
+            width: 430px;
+            font-size: 35px;
+            margin: auto;
+        }
+
+        &--dark
+        {
+            font-weight: map-get($font-weights, semi-bold );
+        }
+    }
+
+    &__description
+    {
+        color: $grayish-blue;
+        transform: translateY(-1em);
+        line-height: 1.5;
+        text-align: center;
+
+        @include responsive(desktop)
+        {
+            width: 500px;
+            transform: translateY(1em);
+            margin: auto;
+        }
+    }
+}
